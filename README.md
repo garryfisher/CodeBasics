@@ -2,11 +2,32 @@
 Ссылка на курс: https://code-basics.com/ru/languages/python  
 
 ### Задания
+[Задание №68. Синтаксический сахар](#№68)  
 [Задание №69. Возврат из циклов](#№69)   
 [Задание №70. Цикл for](#№70)   
 
+____
 
+<a id="№68"></a>
+#### №69. Синтаксический сахар.
+*Реализуйте функцию filter_string(), принимающую на вход строку и символ, и возвращающую новую строку, в которой удален переданный символ во всех его позициях.
+*
 
+```
+text = 'If I look back I am lost'
+filter_string(text, 'I')  # 'f  look back  am lost'
+filter_string(text, 'o')  # 'If I lk back I am lst'
+```
+Ответ:
+```
+def filter_string(item, char):
+    result = ''
+    for x in item:
+        if x != char:
+            result += x
+    return result
+```
+____
 
 <a id="№69"></a>
 #### №69. Возврат из циклов.
@@ -40,7 +61,7 @@ def is_contains_char(item, char):
 def is_contains_char(item, char):
     return True if char in item else False
 ```
-
+____
 
 
 <a id="№70"></a>
@@ -63,3 +84,4 @@ def filter_string(item, char):
             result += x   
     return result
 ```
+____
